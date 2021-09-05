@@ -1,0 +1,7 @@
+.tarjeta{
+    width: 25%;
+    background-color:blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
