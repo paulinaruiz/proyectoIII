@@ -3,8 +3,8 @@ import Card from '../card/Card';
 import '../main/Main.css';
 
 class Main extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
 
             originales:[],
@@ -41,7 +41,7 @@ class Main extends Component{
                     this.state.peliculas.map((pelicula)=>
                     <Card
                     key ={ pelicula.id }
-                    datosPelicula = { pelicula}/>
+                    datosPelicula = {pelicula}/>
                     )
                 }
               
