@@ -19,9 +19,15 @@ class Main extends Component{
         let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US'
             fetch(url)
             .then(respuesta => respuesta.json())
-            .then(data=>{
+            .then(data=>{ 
+                this.setState({
+                    originales:data.results, 
+                    peliculas:data.results, 
+                    cargando: true 
+                })
                 console.log(data);
             })
+            .catch(err=> console.log(err))
 
        
     }
@@ -29,8 +35,17 @@ class Main extends Component{
         return(
         
             <div className="tarjeta">
-                <Card/>
-                <Card/>
+                {
+                    this.state.cargando === false ?
+                    <h2>cargando</h2> :
+                    this.state.peliculas.map((pelicula)=>
+                    <Card
+                    key ={ pelicula.id }
+                    datosPelicula = { pelicula}/>
+                    )
+                }
+              
+                
                 <Card/>
                 <Card/>
                 <Card/>
