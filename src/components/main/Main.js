@@ -46,9 +46,7 @@ class Main extends Component{
                 }
               
                 
-                <Card/>
-                <Card/>
-                <Card/>
+                
             </div>
         );
     }
