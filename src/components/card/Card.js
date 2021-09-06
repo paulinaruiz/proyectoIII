@@ -27,11 +27,6 @@ class Card extends Component{
     render(){
         return(
             <div className='card'>
-<<<<<<< HEAD
-                <img src="#"/>
-                <h1>Titulo: </h1>
-                <h2>Descripcion: </h2>
-=======
                 
                 <h1>{this.props.datosPelicula.title}</h1>
                 
@@ -42,7 +37,6 @@ class Card extends Component{
               
                 <p className='more' onClick={()=>this.viewMore()}>{this.state.text}</p>
 
->>>>>>> d6cd8a763a1eed4b5fe7e1f92a07f36f388b3f8a
             </div>
         );
     }

@@ -1,0 +1,8 @@
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer h3{
+    margin-left: -20px;
+}

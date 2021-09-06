@@ -1,10 +1,11 @@
 .card{
     padding: 10px;
     margin: 20px;
-    width: fit-content;
+    width: 20%;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    
 }
 .more{
     color: blue;
@@ -18,4 +19,7 @@
 }
 .show{
     display: block;
+}
+h1{
+    font-size: small;
 }
