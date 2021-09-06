@@ -8,9 +8,14 @@ class Main extends Component{
     }
     componentDidMount(){
         console.log('did mount');
-        {
-            //fetch(url).....
-        }
+        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US'
+            fetch(url)
+            .then(respuesta => respuesta.json())
+            .then(data=>{
+                console.log(data);
+            })
+
+       
     }
     render(){
         return(
