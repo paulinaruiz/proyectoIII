@@ -5,6 +5,14 @@ import '../main/Main.css';
 class Main extends Component{
     constructor(){
         super()
+        this.state={
+
+            originales:[],
+            peliculas:[],
+            nexturl:"",
+            cargando:false,
+
+        }
     }
     componentDidMount(){
         console.log('did mount');
