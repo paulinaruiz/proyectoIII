@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../header/Header.css';
+
 class Header extends Component{
     constructor(){
         super();
@@ -19,9 +20,13 @@ class Header extends Component{
             <i className="fas fa-align-justify"></i> 
         </div>
 
-        <div> <form action="">
+        <div className="buscador">
+             <form action="" >
                 <input type="text" name="search" id="" placeholder="Search"/>
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <div className="lupa">
+                <i class="fas fa-search"></i>
+                </div>
+                
             </form>
         </div>
         
