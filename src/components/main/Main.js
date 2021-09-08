@@ -31,17 +31,31 @@ class Main extends Component{
 
        
     }
+    deleteCard(id){
+        console.log(id);
+        const peliculasRestantes = this.state.peliculas.filter(pelicula=> pelicula.id != id)
+      
+        this.setState({
+            peliculas: peliculasRestantes
+            //le digo que agarre a todos los persoanjes y saque el que tiene el id que manda el componente hijo al hacer click
+        })
+    }
     render(){
         return(
         
             <div className="tarjeta">
                 {
                     this.state.cargando === false ?
-                    <h2>cargando</h2> :
+                    <h2>Cargando...</h2> :
                     this.state.peliculas.map((pelicula)=>
                     <Card
                     key ={ pelicula.id }
-                    datosPelicula = {pelicula}/>
+                    datosPelicula = {pelicula}
+                    delete={
+                        (peliculaBorrar)=>this.deleteCard(peliculaBorrar)
+                        /*paso un metodo como prop */
+                    }
+                    />
                     )
                 }
               
