@@ -28,19 +28,19 @@ class Card extends Component{
         return(
             <div className='card'>
 
-                <img src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
-                
-                <h1>{this.props.datosPelicula.title}</h1>
-                
-                <p>{this.props.datosPelicula.vote_average}</p>
+                <img className='imgCard' src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
+               <section className='info'> 
+                        <h1>{this.props.datosPelicula.title}</h1>
+                        
+                        <p>{this.props.datosPelicula.vote_average}</p>
 
-                <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Overview: {this.props.datosPelicula.overview} </p>
-                
-              
-                <p className='more' onClick={()=>this.viewMore()}>{this.state.text}</p>
+                        <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Overview: {this.props.datosPelicula.overview} </p>
+                </section>        
+              <div className='buttons'>
+                <button className='more' onClick={()=>this.viewMore()}>{this.state.text}</button>
 
-                <button onClick={(id)=> this.props.delete(this.props.datosPelicula.id)}>Borrar</button>
-
+                <button className='delete' onClick={(id)=> this.props.delete(this.props.datosPelicula.id)}>Delete</button>
+              </div>
             </div>
         );
     }

@@ -2,17 +2,14 @@
     padding: 10px;
     margin: 20px;
     width: 20%;
-    background: #fff;
+    background: rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    color: white;
     
 }
 .more{
-    color: blue;
-}
-.more:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    margin-right: 10px;
 }
 .hide{
     display: none;
@@ -22,4 +19,15 @@
 }
 h1{
     font-size: small;
+}
+.imgCard{
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    text-align: center;
 }

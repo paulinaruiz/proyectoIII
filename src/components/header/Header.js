@@ -11,7 +11,7 @@ class Header extends Component{
         return(
             //Preguntar si hay que componetizar el header: por ej: buscador, sort.
     <div className=" header">
-        <img src="img/descarga.png"/>
+        <img className='imgHeader' src="img/descarga.png"/>
         
         <div className="iconosheader"> 
             <p>Ordenar ASC/ DESC</p>

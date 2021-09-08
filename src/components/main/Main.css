@@ -4,4 +4,19 @@
     margin: 50px;
     justify-content: center;
     align-items: center;
-    }
+}
+body{
+    background: white;
+}
+.bot{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+
+}
+.bot button{
+    width: 100px;
+    margin: 10px;
+}

@@ -83,13 +83,14 @@ class Main extends Component{
                 
                 
             </div>
-            
-            <button onClick = {()=>this.addMore()}>
-            Mas peliculas
-            </button>
-            <button onClick = {()=>this.reset()}>  
-            Reset
-            </button>
+            <div className='bot'>
+                <button onClick = {()=>this.addMore()}>
+                Mas peliculas
+                </button>
+                <button onClick = {()=>this.reset()}>  
+                Reset
+                </button>
+            </div>
             </div>
         );
 
