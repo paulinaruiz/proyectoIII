@@ -16,7 +16,7 @@ class Main extends Component{
     }
     componentDidMount(){
         console.log('did mount');
-        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US'
+        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1'
             fetch(url)
             .then(respuesta => respuesta.json())
             .then(data=>{ 
@@ -31,6 +31,25 @@ class Main extends Component{
 
        
     }
+    addMore(){
+        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=2'
+        //preguntar como hacer para cambiar la page
+        fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(data => {
+            this.setState({
+                peliculas: this.state.peliculas.concat(data.results)
+            })
+        })
+        .catch(err=> console.log(err))
+        
+    }
+    reset(){
+        this.setState({
+            peliculas:this.state.originales
+        })
+       
+    }
     deleteCard(id){
         console.log(id);
         const peliculasRestantes = this.state.peliculas.filter(pelicula=> pelicula.id != id)
@@ -42,6 +61,8 @@ class Main extends Component{
     }
     render(){
         return(
+        <div>
+
         
             <div className="tarjeta">
                 {
@@ -62,7 +83,16 @@ class Main extends Component{
                 
                 
             </div>
+            
+            <button onClick = {()=>this.addMore()}>
+            Mas peliculas
+            </button>
+            <button onClick = {()=>this.reset()}>  
+            Reset
+            </button>
+            </div>
         );
+
     }
 }
 export default Main;
