@@ -27,6 +27,8 @@ class Card extends Component{
     render(){
         return(
             <div className='card'>
+
+                <img src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
                 
                 <h1>{this.props.datosPelicula.title}</h1>
                 
