@@ -9,21 +9,24 @@ class Main extends Component{
 
             originales:[],
             peliculas:[],
-            nexturl:"",
+            url:"",
             cargando:false,
 
         }
     }
     componentDidMount(){
         console.log('did mount');
-        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1'
+        let page = 1
+        let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page:${page}`
+    
             fetch(url)
             .then(respuesta => respuesta.json())
             .then(data=>{ 
                 this.setState({
                     originales:data.results, 
                     peliculas:data.results, 
-                    cargando: true 
+                    cargando: true,
+                    url: data.page
                 })
                 console.log(data);
             })
@@ -32,13 +35,14 @@ class Main extends Component{
        
     }
     addMore(){
-        let url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=2'
+        let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=${this.state.url + 1 } `
         //preguntar como hacer para cambiar la page
         fetch(url)
         .then(respuesta => respuesta.json())
         .then(data => {
             this.setState({
-                peliculas: this.state.peliculas.concat(data.results)
+                peliculas: this.state.peliculas.concat(data.results),
+                url: data.page
             })
         })
         .catch(err=> console.log(err))

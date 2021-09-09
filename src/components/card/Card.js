@@ -35,6 +35,10 @@ class Card extends Component{
                         <p>{this.props.datosPelicula.vote_average}</p>
 
                         <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Overview: {this.props.datosPelicula.overview} </p>
+
+                        <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Released at: {this.props.datosPelicula.release_date} </p>
+
+                        <p className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Language: {this.props.datosPelicula.original_language} </p>
                 </section>        
               <div className='buttons'>
                 <button className='more' onClick={()=>this.viewMore()}>{this.state.text}</button>
