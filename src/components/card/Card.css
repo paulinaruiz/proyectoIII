@@ -8,8 +8,18 @@
     color: white;
     
 }
+.delete{
+background-color: #EFEDD0;
+margin-right: 10px;
+border: transparent;
+border-radius: 2px;
+
+}
 .more{
     margin-right: 10px;
+    background-color:  #EFEDD0 ;
+    border: transparent;
+    border-radius: 2px;
 }
 .hide{
     display: none;
