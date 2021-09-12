@@ -1,5 +1,5 @@
-import React from 'react';
-import '../footer/Footer.css';
+import React from './node_modules/react';
+import './Footer.css';
 function Footer(){
     return(
         <div className="footer">
