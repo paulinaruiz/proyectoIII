@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import '../card/Card.css';
+import React, {Component} from './node_modules/react';
+import './Card.css';
 
 
 class Card extends Component{
