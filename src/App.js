@@ -74,8 +74,11 @@ class App extends Component {
           }
           deleteCard={
             (peliculaBorrar)=>this.deleteCard(peliculaBorrar)
-            //está bien pasarlo desde app?
           }
+          reset={
+            ()=>this.reset()
+          }
+          
           />
           <Footer/>
 
