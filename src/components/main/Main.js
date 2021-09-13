@@ -37,7 +37,7 @@ class Main extends Component{
                 <button onClick = {()=>this.props.addMore()}>
                 Mas peliculas
                 </button>
-                <button onClick = {()=>this.reset()}>  
+                <button onClick = {()=>this.props.reset()}>  
                 Reset
                 </button>
             </div>
