@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Footer from './components/Footer/Footer'
 import Main from './components/Main/Main'
-import Header from './components/header/Header'
+import Header from './components/Header/Header'
 import { Component } from 'react';
 class App extends Component {
   constructor(props){
