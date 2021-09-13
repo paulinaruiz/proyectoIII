@@ -6,13 +6,27 @@ class Layers extends Component{
         super(props);
             }
         
+        
     render(){
+        console.log(this.props);
+        if( props.orientation === false){
         return(
-            <div>    
-            <i className="fas fa-th" onClick={()=>this.props.orientation()}></i>
-            <i className="fas fa-align-justify"onClick={()=>this.props.orientation()}></i> 
-            </div>
-            );
+
+        <div onClick={()=> this.props.changeOrientation()}>
+            <i className= 'fas fa-th color'/>
+            <i className= 'fas fa-align-justify'/>
+        <div/>
+        );
+        } else {
+            
+              return(
+
+                <div onClick={()=> this.props.changeOrientation()}>
+                    <i className= 'fas fa-th color'/>
+                    <i className= 'fas fa-align-justify'/>
+                <div/>
+                ); 
+          
         }   }
 export default Layers;
 

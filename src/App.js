@@ -28,7 +28,8 @@ class App extends Component {
                 originales:data.results, 
                 peliculas:data.results, 
                 cargando: true,
-                url: data.page
+                url: data.page,
+                orientation: false,
             })
             console.log(data);
         })
@@ -63,7 +64,7 @@ class App extends Component {
           //le digo que agarre a todos los persoanjes y saque el que tiene el id que manda el componente hijo al hacer click
       })
   }
-  orientation(){
+  changeOrientation(){
     if(this.state.orientation){
         this.setState({
            orientation: false,
@@ -77,8 +78,9 @@ class App extends Component {
   render(){
       return (
       <div id="body">
-          <Header orientation={
-            ()=> this.orientation()}/>
+          <Header changeOrientation={
+            ()=> this.changeOrientation()}
+            orientation= {this.state.orientation}/>
           <Main peliculas= {this.state.peliculas}
           cargando={this.state.cargando}
           addMore={

@@ -17,8 +17,9 @@ class Header extends Component{
         <img className='imgHeader' src="img/descarga.png"/>
         
         <div className="iconosheader"> 
-            <Layers orientation={
-            ()=> this.props.orientation()}/>
+            <Layers changeOrientation={
+            ()=> this.props.changeOrientation()}
+            orientation= {this.props.orientation}/>
         </div>
 
         <div className="buscador">
