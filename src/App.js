@@ -12,6 +12,7 @@ class App extends Component {
       peliculas:[],
       url:"",
       cargando:false,
+      orientation: false,
 
       }
     }
@@ -62,11 +63,22 @@ class App extends Component {
           //le digo que agarre a todos los persoanjes y saque el que tiene el id que manda el componente hijo al hacer click
       })
   }
- 
+  orientation(){
+    if(this.state.orientation){
+        this.setState({
+           orientation: false,
+        })
+    } else{
+        this.setState({
+            orientation: true,
+        })
+    }
+}   
   render(){
       return (
       <div id="body">
-          <Header/>
+          <Header orientation={
+            ()=> this.orientation()}/>
           <Main peliculas= {this.state.peliculas}
           cargando={this.state.cargando}
           addMore={
@@ -78,7 +90,9 @@ class App extends Component {
           reset={
             ()=>this.reset()
           }
-          
+          orientation={
+            this.state.orientation
+          }
           />
           <Footer/>
 

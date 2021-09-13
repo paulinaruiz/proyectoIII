@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import Layers from '../Layers/Layers';
 import './Header.css';
+
 
 class Header extends Component{
     constructor(){
@@ -15,9 +17,8 @@ class Header extends Component{
         <img className='imgHeader' src="img/descarga.png"/>
         
         <div className="iconosheader"> 
-            <p>Ordenar ASC/ DESC</p>
-            <i className="fas fa-th"></i>
-            <i className="fas fa-align-justify"></i> 
+            <Layers orientation={
+            ()=> this.props.orientation()}/>
         </div>
 
         <div className="buscador">
@@ -25,6 +26,7 @@ class Header extends Component{
                 <input type="text" name="search" id="" placeholder="Search"/>
                 <div className="lupa">
                 <i class="fas fa-search"></i>
+                
                 </div>
                 
             </form>
