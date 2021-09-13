@@ -14,7 +14,7 @@ class Main extends Component{
         <div className="bodytarjeta">
 
         
-            <div className="tarjeta">
+            <div className={this.props.orientation ? 'grill':'lines'}>
                 {
                     this.props.cargando === false ?
                     <h2>Cargando...</h2> :
