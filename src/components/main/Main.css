@@ -5,12 +5,9 @@
     justify-content: center;
     align-items: center;
 }
-
-
-  
-  
-
-
+.lines{
+    margin-top: 40px;
+}
 .bodytarjeta{
     padding-top: 100px;
 }
