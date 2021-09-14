@@ -30,6 +30,7 @@ class App extends Component {
                 cargando: true,
                 url: data.page,
                 orientation: false,
+                filterBt:'',
             })
             console.log(data);
         })
@@ -74,13 +75,20 @@ class App extends Component {
             orientation: true,
         })
     }
-}   
+  }
+filtrarPeliculas(texto){
+    let peliculasFiltradas = this.state.originales.filter((pelicula)=> pelicula.title.toLowerCase().includes(texto.toLowerCase()));
+    this.setState({
+        peliculas: peliculasFiltradas,
+    });
+}
   render(){
       return (
       <div id="body">
           <Header changeOrientation={
             ()=> this.changeOrientation()}
-            orientation= {this.state.orientation}/>
+            orientation= {this.state.orientation}
+            filtrarPeliculas={(texto)=>this.filtrarPeliculas(texto)}/>
           <Main peliculas= {this.state.peliculas}
           cargando={this.state.cargando}
           addMore={

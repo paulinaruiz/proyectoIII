@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import Layers from '../Layers/Layers';
 import './Header.css';
+import FilterCard from '../FilterCard/FilterCard';
 
 
 class Header extends Component{
     constructor(){
         super();
-       {/* this.state = {
-            valor:0,
-        } */}
+       
     }
     render(){
         return(
@@ -21,16 +20,10 @@ class Header extends Component{
             ()=> this.props.changeOrientation()}
             orientation= {this.props.orientation}/>
         </div>
-
+          
         <div className="buscador">
-             <form action="" >
-                <input type="text" name="search" id="" placeholder="Search"/>
-                <div className="lupa">
-                <i class="fas fa-search"></i>
-                
-                </div>
-                
-            </form>
+        <FilterCard
+            filtrarPeliculas={(texto)=>this.props.filtrarPeliculas(texto)}/>
         </div>
         
     </div>
