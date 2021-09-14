@@ -27,8 +27,8 @@ class Card extends Component{
     render(){
         return(
             <div className='card'>
-
                 <img className='imgCard' src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
+                <div>
                <section className='info'> 
                         <h1>{this.props.datosPelicula.title}</h1>
                         
@@ -44,6 +44,7 @@ class Card extends Component{
                 <button className='more' onClick={()=>this.viewMore()}>{this.state.text}</button>
 
                 <button className='delete' onClick={(id)=> this.props.delete(this.props.datosPelicula.id)}>Delete</button>
+              </div>
               </div>
             </div>
         );

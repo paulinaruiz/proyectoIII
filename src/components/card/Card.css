@@ -9,6 +9,32 @@
     overflow: hidden;
     
 }
+.lines .card {
+    background-color: black;
+    padding-top: 13px;
+    margin-top: 8px;
+    border: radius 2%;
+
+}
+.lines .info{
+    color: white;
+    text-align:center;
+}
+.lines .card img{
+    width: 14%;
+    padding: 3px;
+}
+
+.lines .buttons .more{
+    display: none;
+}
+.lines .hide{
+    display: block;
+}
+.lines .card{
+    display: flex;
+    
+}
 
 .tarjeta .card{
     transition: 0.2s ;

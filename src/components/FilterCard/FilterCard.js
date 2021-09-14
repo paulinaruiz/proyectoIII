@@ -13,7 +13,7 @@ class FilterCard extends Component{
       }
       cambios(e){
         this.setState({
-          filterBy: e.target.value
+          filterBy: e.target.value 
         }, ()=>this.props.filtrarPeliculas(this.state.filterBy)
         );
       }
@@ -22,7 +22,7 @@ class FilterCard extends Component{
         return(
             <form onSubmit={this.submit} >
                         <input type="text" 
-                        name="search"
+                         name="search"
                          placeholder="Search"
                          onChange={(e)=>this.cambios(e)}
                          //value= {this.state.filterBy}

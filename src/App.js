@@ -81,7 +81,7 @@ filtrarPeliculas(texto){
     
     this.setState({
         peliculas: peliculasFiltradas,
-        descripcion: descripcionFiltradas,
+        
     });
 }
   render(){
