@@ -1,32 +1,33 @@
 import React, {Component} from 'react';
 import './Layers.css';
 
-class Layers extends Component{
-    constructor(props){
-        super(props);
-            }
+function Layers (props){
+
+
         
         
-    render(){
-        console.log(this.props);
+        
+    
+        console.log(props.orientation);
         if( props.orientation === false){
         return(
 
-        <div onClick={()=> this.props.changeOrientation()}>
-            <i className= 'fas fa-th color'/>
-            <i className= 'fas fa-align-justify'/>
-        <div/>
+        <div>
+            <i className= 'fas fa-th' onClick={()=> props.changeOrientation()}/>
+            <i className= 'fas fa-align-justify color'/>
+        </div>
         );
         } else {
             
               return(
 
-                <div onClick={()=> this.props.changeOrientation()}>
-                    <i className= 'fas fa-th color'/>
-                    <i className= 'fas fa-align-justify'/>
-                <div/>
+                <div> 
+                    <i className= 'fas fa-th color' />
+                    <i className= 'fas fa-align-justify' onClick={()=> props.changeOrientation()}/>
+                </div>
                 ); 
           
-        }   }
+        }   
+    }
 export default Layers;
 
