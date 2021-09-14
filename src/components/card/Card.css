@@ -1,4 +1,4 @@
-.card{
+.tarjeta .card{
     padding: 10px;
     margin: 20px;
     width: 20%;
@@ -6,7 +6,16 @@
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
     color: white;
+    overflow: hidden;
     
+}
+
+.tarjeta .card{
+    transition: 0.2s ;
+}
+.tarjeta .card:hover{
+    transform: scale(1.5);
+   
 }
 .delete{
 background-color: #EFEDD0;
