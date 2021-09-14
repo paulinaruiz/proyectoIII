@@ -13,6 +13,7 @@ class App extends Component {
       url:"",
       cargando:false,
       orientation: false,
+      descripcion:'',
 
       }
     }
@@ -30,7 +31,7 @@ class App extends Component {
                 cargando: true,
                 url: data.page,
                 orientation: false,
-                filterBt:'',
+                descripcion: data.overview,
             })
             console.log(data);
         })
@@ -78,8 +79,10 @@ class App extends Component {
   }
 filtrarPeliculas(texto){
     let peliculasFiltradas = this.state.originales.filter((pelicula)=> pelicula.title.toLowerCase().includes(texto.toLowerCase()));
+    let descripcionFiltradas = this.state.originales.filter((descripcion)=> descripcion.overview.toLowerCase().includes(texto.toLowerCase()));
     this.setState({
         peliculas: peliculasFiltradas,
+        descripcion: descripcionFiltradas,
     });
 }
   render(){
