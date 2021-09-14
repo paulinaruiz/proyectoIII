@@ -11,8 +11,8 @@
 }
 .lines .card {
     background-color: black;
-    margin-top: 8px;
-    border: radius 2%;
+    margin: 10px;
+    border-radius:10px;
     transition: 0.3s ;
 
 }
