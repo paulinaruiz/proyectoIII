@@ -19,6 +19,7 @@ class FilterCard extends Component{
       }
     
     render(){
+      
         return(
             <form onSubmit={this.submit} >
                         <input type="text" 

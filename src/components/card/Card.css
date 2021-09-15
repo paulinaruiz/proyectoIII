@@ -26,6 +26,7 @@ font-size: 24px ;
 }
 .lines .card img{
     width: 14%;
+    margin: 10px;
     
 }
 
@@ -34,6 +35,7 @@ font-size: 24px ;
 }
 .lines .hide{
     display: block;
+    
 }
 .lines .card{
     display: flex;
@@ -52,6 +54,8 @@ background-color: #EFEDD0;
 margin-right: 10px;
 border: transparent;
 border-radius: 2px;
+box-sizing: unset;
+font-size: larger;
 
 }
 .more{
@@ -59,12 +63,15 @@ border-radius: 2px;
     background-color:  #EFEDD0 ;
     border: transparent;
     border-radius: 2px;
+    box-sizing: unset;
+    font-size: larger;
 }
 .hide{
     display: none;
 }
 .show{
     display: block;
+    
 }
 h1{
     font-size: small;
@@ -76,6 +83,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .info{
     text-align: center;

@@ -9,7 +9,7 @@
     margin-top: 40px;
 }
 .bodytarjeta{
-    padding-top: 100px;
+    padding-top: 130px;
 }
 body{
     background: white;
@@ -25,5 +25,10 @@ body{
 .bot button{
     width: 100px;
     margin: 10px;
+    background-color: #EFEDD0;
+    color: black;
+    border-radius: 10px;
+    box-sizing: unset;
+    font-size: larger;
    
 }

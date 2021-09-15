@@ -105,6 +105,7 @@ filtrarPeliculas(texto){
           orientation={
             this.state.orientation
           }
+
           />
           <Footer/>
 
