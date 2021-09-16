@@ -13,6 +13,7 @@ class App extends Component {
       url:"",
       cargando:false,
       orientation: false,
+      search:[],
    
 
       }
@@ -28,6 +29,7 @@ class App extends Component {
             this.setState({
                 originales:data.results, 
                 peliculas:data.results, 
+                search:data.results,
                 cargando: true,
                 url: data.page,
                 orientation: false,
@@ -44,6 +46,7 @@ class App extends Component {
       .then(data => {
           this.setState({
               peliculas: this.state.peliculas.concat(data.results),
+              search: this.state.peliculas.concat(data.results),
               url: data.page
           })
       })
@@ -52,7 +55,8 @@ class App extends Component {
   }
   reset(){
       this.setState({
-          peliculas:this.state.originales
+          peliculas:this.state.originales,
+          search:this.state.originales
       })
      
   }
@@ -61,7 +65,8 @@ class App extends Component {
       const peliculasRestantes = this.state.peliculas.filter(pelicula=> pelicula.id != id)
     
       this.setState({
-          peliculas: peliculasRestantes
+          peliculas: peliculasRestantes,
+          search: peliculasRestantes
           //le digo que agarre a todos los persoanjes y saque el que tiene el id que manda el componente hijo al hacer click
       })
   }
@@ -77,10 +82,10 @@ class App extends Component {
     }
   }
 filtrarPeliculas(texto){
-    let peliculasFiltradas = this.state.originales.filter((pelicula)=> pelicula.title.toLowerCase().includes(texto.toLowerCase()));
+    let peliculasFiltradas = this.state.search.filter((pelicula)=> pelicula.title.toLowerCase().includes(texto.toLowerCase()));
     
     this.setState({
-        peliculas: peliculasFiltradas,
+       peliculas: peliculasFiltradas,
         
     });
 }
@@ -105,6 +110,7 @@ filtrarPeliculas(texto){
           orientation={
             this.state.orientation
           }
+          search={this.state.search}
 
           />
           <Footer/>
