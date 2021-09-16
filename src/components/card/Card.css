@@ -51,7 +51,7 @@ font-size: 24px ;
    
 }
 .delete{
-background-color: #EFEDD0;
+background-color:white;
 margin-right: 10px;
 border: transparent;
 border-radius: 2px;
@@ -61,7 +61,7 @@ font-size: larger;
 }
 .more{
     margin-right: 10px;
-    background-color:  #EFEDD0 ;
+    background-color:  white ;
     border: transparent;
     border-radius: 2px;
     box-sizing: unset;
