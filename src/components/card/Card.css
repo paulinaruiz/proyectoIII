@@ -14,12 +14,12 @@
     margin: 10px;
     border-radius:10px;
     transition: 0.3s ;
-
 }
 .lines .info{
     color: white;
     text-align:center;
     padding-left: 30px;
+    width: fit-content;
 }
 .lines .info h1{
 font-size: 24px ;
@@ -39,6 +39,7 @@ font-size: 24px ;
 }
 .lines .card{
     display: flex;
+  
     
 }
 
