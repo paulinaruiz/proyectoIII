@@ -2,13 +2,13 @@ import React from 'react';
 import './Footer.css';
 function Footer(){
     return(
-        <div className="footer">
+        <footer className="footer">
             <h3>Ana Saunier</h3>
             <h3>Valentina D' Aquino</h3>
             <h3>Paulina Ruiz</h3>
 
             <a href="https://www.themoviedb.org/?language=es"> <img src="img/descarga.jpeg" /></a>
-        </div>
+        </footer>
     );
 }
 export default Footer;

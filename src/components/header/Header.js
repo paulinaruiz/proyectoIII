@@ -12,21 +12,22 @@ class Header extends Component{
     render(){
         return(
             //Preguntar si hay que componetizar el header: por ej: buscador, sort.
-    <div className=" header">
-        <img className='imgHeader' src="img/descarga.png"/>
-        
-        <div className="iconosheader"> 
-            <Layers changeOrientation={
-            ()=> this.props.changeOrientation()}
-            orientation= {this.props.orientation}/>
-        </div>
+    <header> 
+       <div className=" header">
+            <img className='imgHeader' src="img/descarga.png"/>
           
-        <div className="buscador">
-        <FilterCard
-            filtrarPeliculas={(texto)=>this.props.filtrarPeliculas(texto)}/>
+                <div className="iconosheader"> 
+                    <Layers changeOrientation={
+                    ()=> this.props.changeOrientation()}
+                    orientation= {this.props.orientation}/>
+                </div>
+                <div className="buscador">
+                <FilterCard
+                    filtrarPeliculas={(texto)=>this.props.filtrarPeliculas(texto)}/>
+                </div>
+         
         </div>
-        
-    </div>
+    </header>
          
         );
     }
