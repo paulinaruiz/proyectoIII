@@ -8,6 +8,10 @@
 .lines{
     margin-top: 40px;
 }
+.lines p{
+    align-items: center;
+   
+}
 .bodytarjeta{
     padding-top: 130px;
 }
@@ -25,10 +29,12 @@ body{
 .bot button{
     width: 100px;
     margin: 10px;
-    background-color: #EFEDD0;
     color: black;
     border-radius: 10px;
     box-sizing: unset;
     font-size: larger;
+    background-color: white;
+    color: black;
+    border: 2px solid #EFEDD0; 
    
 }

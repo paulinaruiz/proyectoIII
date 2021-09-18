@@ -21,6 +21,9 @@
 .imgHeader{
     width: 7%;
 }
+.imgHeader1{
+    width: 10%;
+}
 .iconosheader{
     display: flex;
     flex-wrap: wrap;
