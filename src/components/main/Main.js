@@ -15,7 +15,7 @@ class Main extends Component{
 
             <section className='contenedorTarjetas'>
             
-                <div className={this.props.orientation ? 'tarjeta':'lines'}>
+                <div className={this.props.orientation ? 'lines':'tarjeta'}>
                     {
                         this.props.cargando === false ?
                         <h2>Cargando...&#128548;</h2> : (
