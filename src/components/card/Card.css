@@ -95,7 +95,7 @@ h1{
     width: 100%;
 }
 .tarjeta .buttons{
-    display: flex;
+        display: flex;
     justify-content: center;
     align-items: center;
     
