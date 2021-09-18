@@ -7,7 +7,7 @@ function Footer(){
             <h3>Valentina D' Aquino</h3>
             <h3>Paulina Ruiz</h3>
 
-            <a href="https://www.themoviedb.org/?language=es"> <img src="img/descarga.jpeg" /></a>
+            <a href="https://www.themoviedb.org/?language=es"> <img className="logofooter" src="img/descarga.jpeg" /></a>
         </footer>
     );
 }
