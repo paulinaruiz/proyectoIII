@@ -9,7 +9,7 @@ function Layers (props){
         
     
         console.log(props.orientation);
-        if( props.orientation === false){
+        if( props.orientation === true){
         return(
 
         <div>
