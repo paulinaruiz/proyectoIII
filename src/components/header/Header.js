@@ -14,6 +14,7 @@ class Header extends Component{
             //Preguntar si hay que componetizar el header: por ej: buscador, sort.
     <header> 
        <div className=" header">
+            <img className='imgHeader1' src="img/logox.jpeg"/>
             <img className='imgHeader' src="img/descarga.png"/>
           
                 <div className="iconosheader"> 
