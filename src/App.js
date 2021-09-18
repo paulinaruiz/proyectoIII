@@ -12,7 +12,7 @@ class App extends Component {
       peliculas:[],
       url:"",
       cargando:false,
-      orientation: false,
+      orientation: true,
       search:[],
    
 
