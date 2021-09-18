@@ -13,16 +13,16 @@ function Layers (props){
         return(
 
         <div>
-            <i className= 'fas fa-th' onClick={()=> props.changeOrientation()}/>
-            <i className= 'fas fa-align-justify color'/>
+            <i className= ' fas fa-th' onClick={()=> props.changeOrientation()}/>
+            <i className= 'fas fa-align-justify color' />
         </div>
-        );
+        ); 
         } else {
             
               return(
 
                 <div> 
-                    <i className= 'fas fa-th color' />
+                    <i className= 'fas fa-th color ' />
                     <i className= 'fas fa-align-justify' onClick={()=> props.changeOrientation()}/>
                 </div>
                 ); 
