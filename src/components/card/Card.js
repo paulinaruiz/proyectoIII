@@ -43,7 +43,7 @@ class Card extends Component{
                             <div className='buttons'>
                                 <button className='more' onClick={()=>this.viewMore()}>{this.state.text}</button>
 
-                                <button className='delete' onClick={(id)=> this.props.delete(this.props.datosPelicula.id)}>Delete</button>
+                                <button className='delete' onClick={(id)=> this.props.delete(this.props.datosPelicula.id)}>Delete &#10006;</button>
                             </div>
                         </div>
                 </div>

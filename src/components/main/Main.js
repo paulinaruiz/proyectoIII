@@ -11,48 +11,42 @@ class Main extends Component{
    
     render(){
         return(
-        <div className="bodytarjeta">
+        <main className="bodytarjeta">
 
-        
-            <div className={this.props.orientation ? 'tarjeta':'lines'}>
-                {
-                    this.props.cargando === false ?
-                    <h2>Cargando...</h2> : (
-                        this.props.peliculas.length === 0 ?(
-                            <p>No results were found for your search</p>
-                        ): (
-                            this.props.peliculas.map((pelicula)=>
-                            <Card
-                            key ={ pelicula.id }
-                            datosPelicula = {pelicula}
-                            delete={
-                                (peliculaBorrar)=>this.props.deleteCard(peliculaBorrar)
-                                /*paso un metodo como prop */
-                            }
-                                />
-                            
-                        )
-
-                    )
-
-                 
+            <section className='contenedorTarjetas'>
             
-                  
-                    )
-                }
-              
+                <div className={this.props.orientation ? 'tarjeta':'lines'}>
+                    {
+                        this.props.cargando === false ?
+                        <h2>Cargando...&#128548;</h2> : (
+                            this.props.peliculas.length === 0 ?(
+                                <p className='noResults'>Sorry, no results were found for your search! 	&#128547;</p>
+                            ):(
+                                this.props.peliculas.map((pelicula)=>
+                               
+                                    <Card
+                                    key ={ pelicula.id }
+                                    datosPelicula = {pelicula}
+                                    delete={
+                                        (peliculaBorrar)=>this.props.deleteCard(peliculaBorrar)
+                                        /*paso un metodo como prop */
+                                        }
+                                    /> 
+                                )
+                            ))
+                    }
+                </div>
                 
-                
-            </div>
+            </section>
             <div className={this.props.peliculas.length === 0 ? 'hide':'bot'} >
                 <button onClick = {()=>this.props.addMore()}>
-                Mas peliculas
+                Add more
                 </button>
                 <button onClick = {()=>this.props.reset()}>  
                 Reset
                 </button>
             </div>
-            </div>
+            </main>
         );
 
     }
