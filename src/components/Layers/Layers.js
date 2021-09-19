@@ -1,13 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Layers.css';
 
 function Layers (props){
 
-
-        
-        
-        
-    
         console.log(props.orientation);
         if( props.orientation === true){
         return(
