@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 
 class FilterCard extends Component{
     constructor(props){
@@ -9,7 +9,6 @@ class FilterCard extends Component{
         }
       submit(e){
         e.preventDefault();
-        console.log('No enviar');
       }
       cambios(e){
         this.setState({
@@ -21,12 +20,12 @@ class FilterCard extends Component{
     render(){
       
         return(
-            <form onSubmit={this.submit} >
+            <form onSubmit={(e)=>this.submit(e)} >
                         <input type="text" 
                          name="search"
                          placeholder="Search"
-                         onChange={(e)=>this.cambios(e)}
-                         //value= {this.state.filterBy}
+                         onChange={(e)=>this.cambios(e)} 
+                         value= {this.state.filterBy}
                          />
                         <div className="lupa">
                         <i class="fas fa-search"></i>

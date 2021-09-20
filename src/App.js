@@ -1,8 +1,9 @@
 import './App.css';
-import Footer from './components/Footer/Footer'
-import Main from './components/Main/Main'
-import Header from './components/Header/Header'
+import Footer from './components/footer/Footer'
+import Main from './components/main/Main'
+import Header from './components/header/Header'
 import { Component } from 'react';
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -19,7 +20,7 @@ class App extends Component {
       }
     }
   componentDidMount(){
-    console.log('did mount');
+
     let page = 1
     let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page:${page}`
 
@@ -34,13 +35,12 @@ class App extends Component {
                 url: data.page,
                 orientation: false,
             })
-            console.log(data);
         })
         .catch(err=> console.log(err))
     }
     addMore(){
       let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=${this.state.url + 1 } `
-      //preguntar como hacer para cambiar la page
+
       fetch(url)
       .then(respuesta => respuesta.json())
       .then(data => {
@@ -67,7 +67,7 @@ class App extends Component {
       this.setState({
           peliculas: peliculasRestantes,
           search: peliculasRestantes
-          //le digo que agarre a todos los persoanjes y saque el que tiene el id que manda el componente hijo al hacer click
+          
       })
   }
   changeOrientation(){

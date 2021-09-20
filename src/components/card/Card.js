@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from './node_modules/react';
 import './Card.css';
 
 
@@ -7,19 +7,19 @@ class Card extends Component{
         super(props);
             this.state = {
                 viewMore: false,
-                text:'Ver más',
+                text:'View more',
     }
     }
     viewMore(){
         if(this.state.viewMore){
             this.setState({
                 viewMore: false,
-                text: 'Ver más'
+                text: 'View more'
             })
         } else{
             this.setState({
                 viewMore: true,
-                text: 'Ver menos'
+                text: 'View less'
             })
         }
     }
