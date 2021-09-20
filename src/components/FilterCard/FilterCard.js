@@ -24,7 +24,7 @@ class FilterCard extends Component{
                         <input type="text" 
                          name="search"
                          placeholder="Search"
-                         onChange={(e)=>this.cambios(e)}
+                         onChange={(e)=>this.cambios(e)} 
                          value= {this.state.filterBy}
                          />
                         <div className="lupa">

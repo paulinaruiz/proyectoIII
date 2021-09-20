@@ -29,7 +29,7 @@ class Main extends Component{
                                     datosPelicula = {pelicula}
                                     delete={
                                         (peliculaBorrar)=>this.props.deleteCard(peliculaBorrar)
-                                        /*paso un metodo como prop */
+                                       
                                         }
                                     /> 
                                 )
