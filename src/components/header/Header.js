@@ -1,7 +1,7 @@
 import React from './node_modules/react';
-import Layers from '../Layers/Layers';
+import Layers from '../layers/Layers';
 import './Header.css';
-import FilterCard from '../FilterCard/FilterCard';
+import FilterCard from '../filterCard/FilterCard';
 
 
 function Header(props){
