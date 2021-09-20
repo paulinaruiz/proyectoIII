@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import Layers from '../Layers/Layers';
 import './Header.css';
 import FilterCard from '../FilterCard/FilterCard';
